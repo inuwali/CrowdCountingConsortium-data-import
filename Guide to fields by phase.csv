@@ -1,0 +1,115 @@
+Field Name,R data type,Short Description,In Phase 1?,In Phase 2?,In Phase 3?,Notes
+actors,col_character(),Organizations and/or participants from P1,TRUE,FALSE,FALSE,Split into ‘organizations’ + ‘participants’ starting Phase 2
+arrests,col_character(),"Text or numeric info on arrests (e.g., “5,” “more than 5,” “unspecified”)",TRUE,TRUE,TRUE,
+arrests_any,col_logical(),1/0 indicator for whether any arrests occurred,TRUE,TRUE,TRUE,
+chemical_agents,col_logical(),1/0 indicator for whether tear gas or other irritants were used by police,TRUE,TRUE,FALSE,Removed in Phase 3
+claims,col_character(),"Coder’s phrase describing the protest’s demands/claims (Phase 1) / A comma-separated list of short phrases starting with “for,” “against,” “in celebration of,” and others (Phase 2)",TRUE,TRUE,FALSE,Split into ‘claims_summary’ + ‘claims_verbatim’ in later phases
+claims_summary,col_character(),"Coder’s concise summary of the event’s claims/demands (Phase 2/3). In Phase 3, contains the comma-separated list as described in “claims” for Phase 2.",FALSE,TRUE,TRUE,"In Phase 3, this field is used to generate tags using a regular expression. Unclear whether the tags are appended to the original data in the field. If not, tags are currently not present in phase 3 data as downloaded."
+claims_verbatim,col_character(),"Verbatim text from protesters’ signs, banners, or chants (Phase 2/3)",FALSE,TRUE,TRUE,
+coder,col_character(),Initials of the coder(s) (Phase 3),FALSE,FALSE,TRUE,Added in Phase 3
+conf,col_logical(),Indicator (1/0 or blank) for whether an event was confirmed to have occurred (Phase 3),FALSE,FALSE,TRUE,New in Phase 3
+date,col_date(),Date of the event in YYYY-MM-DD format,TRUE,TRUE,TRUE,Consistent usage
+event_type,col_character(),"Type(s) of protest action in Phase 3 (e.g., “rally,” “march”)",FALSE,FALSE,TRUE,Renamed from ‘type’
+fips_code,col_character(),Five-digit county FIPS code,TRUE,TRUE,TRUE,Consistent usage
+injuries_crowd,col_character(),Text or numeric info on protester injuries (Phase 1 & 2),TRUE,TRUE,FALSE,Replaced by ‘participant_injuries’ in Phase 3
+injuries_crowd_any,col_logical(),1/0 indicator for any protester injuries (Phase 1 & 2),TRUE,TRUE,FALSE,Replaced by ‘participant_injuries’ (and related flags) in P3
+injuries_police,col_character(),Text or numeric info on police injuries (Phase 1 & 2),TRUE,TRUE,FALSE,Replaced by ‘police_injuries’ in Phase 3
+injuries_police_any,col_logical(),1/0 indicator for any police injuries (Phase 1 & 2),TRUE,TRUE,FALSE,Replaced by ‘police_injuries’ (and related flags) in P3
+issue_tags,col_character(),Semicolon-separated tags or themes from the claims (Phase 2),FALSE,TRUE,FALSE,Used only in Phase 2 Concatenation of “issue_tags_summary” and “issue_tags_verbatim”.
+issue_tags_summary,col_character(),Issue tags generated from the coder’s claims_summary (Phase 2),FALSE,TRUE,FALSE,Used only in Phase 2. Content generated after data entry by running a regular expression on the “claims_summary” field. 
+issue_tags_verbatim,col_character(),Issue tags generated from claims_verbatim (Phase 2),FALSE,TRUE,FALSE,Used only in Phase 2. Content generated after data entry by running a regular expression on the “claims_verbatim” field. 
+issues,col_character(),Semicolon-separated textual references to major themes (Phase 1),TRUE,FALSE,FALSE,Used only in Phase 1. Content generated after data entry by running a regular expression on the “claims” field. Superseded by new tagging approach in Phase 2.
+lat,col_double(),Latitude of the resolved locality (city/town),TRUE,TRUE,TRUE,
+locality,col_character(),Name of the city or town in which the event took place,TRUE,TRUE,TRUE,
+location,col_character(),Specific address/landmark/borough in Phase 3 (replaced “location_detail”),FALSE,FALSE,TRUE,"New in Phase 3, replacing location_detail"
+location_detail,col_character(),Specific address/landmark info in Phase 1 & 2,TRUE,TRUE,FALSE,Replaced by “location” in Phase 3
+lon,col_double(),Longitude of the resolved locality (city/town),TRUE,TRUE,TRUE,
+macroevent,col_character(),ID linking related or counter-protest events,TRUE,TRUE,TRUE,Same concept across phases
+notables,col_character(),Names of notable individuals who attended (Phase 3),FALSE,FALSE,TRUE,Added in Phase 3
+notes,col_character(),Miscellaneous coder notes,TRUE,TRUE,TRUE,Consistent usage
+online,col_logical(),Indicator (0/1) for online-only events,TRUE,TRUE,TRUE,
+organizations,col_character(),Names of organizations that participated or led (Phase 2 & 3),FALSE,TRUE,TRUE,Split out from ‘actors’ in Phase 2
+participant_casualties_any,col_logical(),1/0 if any protest participants died or were gravely harmed (Phase 3),FALSE,FALSE,TRUE,New in Phase 3
+participant_deaths,col_character(),Number of participants who died (Phase 2 & 3),FALSE,TRUE,TRUE,Not used in Phase 1
+participant_injuries,col_character(),"Text or numeric info on participant injuries (Phase 3), replacing injuries_crowd",FALSE,FALSE,TRUE,
+participant_measures,col_character(),"Actions protesters took (e.g. roadblock, scuffles) in Phase 2 & 3",FALSE,TRUE,TRUE,New in Phase 2
+participants,col_character(),"Descriptions of participants (e.g. “students, residents”) (Phase 2 & 3)",FALSE,TRUE,TRUE,Split from ‘actors’ in Phase 2
+police_casualties_any,col_logical(),1/0 if police died or were gravely harmed (Phase 3),FALSE,FALSE,TRUE,New in Phase 3
+police_deaths,col_character(),Number of police who died (Phase 2 & 3),FALSE,TRUE,TRUE,Not used in Phase 1
+police_injuries,col_character(),"Text/number for police injuries (Phase 3), replacing injuries_police",FALSE,FALSE,TRUE,
+police_measures,col_character(),"Actions police took (e.g. arrests, skirmish lines) (Phase 2 & 3)",FALSE,TRUE,TRUE,New in Phase 2
+property_damage,col_character(),Text describing property damage by protesters,TRUE,TRUE,TRUE,
+property_damage_any,col_logical(),1/0 indicator for any property damage,TRUE,TRUE,TRUE,
+resolved_county,col_character(),County name resolved via geocoding,TRUE,TRUE,TRUE,
+resolved_locality,col_character(),Resolved city/town name after geocoding,TRUE,TRUE,TRUE,
+resolved_state,col_character(),Resolved U.S. state/territory code after geocoding,TRUE,TRUE,TRUE,
+size_cat,col_double(),"Ordered category of crowd size (1=1–99, 2=100–999, etc.)",TRUE,TRUE,TRUE,
+size_high,col_double(),Highest reported or estimated crowd size,TRUE,TRUE,TRUE,
+size_low,col_double(),Lowest reported or estimated crowd size,TRUE,TRUE,TRUE,
+size_mean,col_double(),Average of size_low and size_high (rounded),TRUE,TRUE,TRUE,
+size_text,col_character(),"Text/short phrase describing crowd size (“dozens,” “count pic,” etc.)",TRUE,TRUE,TRUE,
+source_1,col_character(),First source in Phase 1 & 2 (underscore used),TRUE,TRUE,FALSE,
+source_10,col_character(),Tenth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_11,col_character(),Eleventh source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_12,col_character(),Twelfth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_13,col_character(),Thirteenth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_14,col_character(),Fourteenth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_15,col_character(),Fifteenth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_16,col_character(),Sixteenth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_17,col_character(),Seventeenth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_18,col_character(),Eighteenth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_19,col_character(),Nineteenth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_2,col_character(),Second source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_20,col_character(),Twentieth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_21,col_character(),Twenty-first source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_22,col_character(),Twenty-second source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_23,col_character(),Twenty-third source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_24,col_character(),Twenty-fourth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_25,col_character(),Twenty-fifth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_26,col_character(),Twenty-sixth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_27,col_character(),Twenty-seventh source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_28,col_character(),Twenty-eighth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_29,col_character(),Twenty-ninth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_3,col_character(),Third source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_30,col_character(),Thirtieth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_4,col_character(),Fourth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_5,col_character(),Fifth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_6,col_character(),Sixth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_7,col_character(),Seventh source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_8,col_character(),Eighth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source_9,col_character(),Ninth source in Phase 1 & 2 (underscore),TRUE,TRUE,FALSE,
+source1,col_character(),First source in Phase 3 (no underscore),FALSE,FALSE,TRUE,Phase 3’s naming style differs from P1/P2 “source_1”
+source10,col_character(),Tenth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source11,col_character(),Eleventh source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source12,col_character(),Twelfth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source13,col_character(),Thirteenth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source14,col_character(),Fourteenth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source15,col_character(),Fifteenth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source16,col_character(),Sixteenth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source17,col_character(),Seventeenth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source18,col_character(),Eighteenth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source19,col_character(),Nineteenth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source2,col_character(),Second source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source20,col_character(),Twentieth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source21,col_character(),Twenty-first source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source22,col_character(),Twenty-second source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source23,col_character(),Twenty-third source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source24,col_character(),Twenty-fourth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source25,col_character(),Twenty-fifth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source26,col_character(),Twenty-sixth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source27,col_character(),Twenty-seventh source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source28,col_character(),Twenty-eighth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source29,col_character(),Twenty-ninth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source3,col_character(),Third source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source30,col_character(),Thirtieth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source4,col_character(),Fourth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source5,col_character(),Fifth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source6,col_character(),Sixth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source7,col_character(),Seventh source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source8,col_character(),Eighth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+source9,col_character(),Ninth source in Phase 3 (no underscore),FALSE,FALSE,TRUE,
+state,col_character(),Two-letter US state/territory abbreviation,TRUE,TRUE,TRUE,
+targets,col_character(),Institutions or individuals at which demands were directed (Phase 3),FALSE,FALSE,TRUE,New in Phase 3
+title,col_character(),"Title or name of the event (Phase 2 & 3), if publicly advertised",FALSE,TRUE,TRUE,Added in Phase 2
+type,col_character(),"Type(s) of protest action in Phases 1 & 2 (e.g., “march,” “protest”)",TRUE,TRUE,FALSE,Renamed to ‘event_type’ in Phase 3
+valence,col_double(),"Political orientation code (2/1/0). In P1, 2=pro-Trump, 1=anti-Trump; P2/P3, 2=right-wing, 1=left-wing.",TRUE,TRUE,TRUE,Switched from pro/anti Trump to left/right orientation
