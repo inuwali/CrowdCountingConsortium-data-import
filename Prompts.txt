@@ -1,0 +1,12 @@
+I'm uploading three coding guide files describing three phases of data collection for a  survey. They explain how to code data for a particular phase. Create a table that summarizes fields across all three phases with the following columns:
+
+- Name of the field
+- Description from the coding guide(s) (summarize down to a short paragraph if needed)
+- In phase 1? (TRUE/FALSE)
+- In phase 2? (TRUE/FALSE)
+- In phase 3? (TRUE/FALSE)
+- Changes: Split from a previous field, renamed, added, deleted, etc.
+
+Let me know if you find any fields that don't fit into this process, e.g. a field with the same name that's used in a significantly different way across phases.
+
+As a sanity check, please verify that the final table has the correct number of rows. By my count, that should be 114.
