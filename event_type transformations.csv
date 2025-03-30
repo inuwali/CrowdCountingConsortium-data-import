@@ -1,0 +1,316 @@
+event_type,event_type_new
+art build,artistic
+art installation,artistic
+art projection,artistic
+art protest,artistic
+artistic performance,artistic
+artistic protest,artistic
+performance art,artistic
+banner drop,banner
+hanging of banners,banner
+bicycle rally,bike rally
+bicycle ride,bike rally
+bike brigade,bike rally
+bike ride,bike rally
+ride,bike rally
+block highway,blockade
+block highways,blockade
+block interactions and light rail stop,blockade
+block streets,blockade
+Blockade,blockade
+railroad blockade,blockade
+railway blockade,blockade
+road blockade,blockade
+roadblock,blockade
+street blockade,blockade
+Nonviolent blockade,blockade; nonviolent
+boat parade,boat rally
+kayak protest,boat rally
+Casserole Protests (Cacerolazo),cacerolazo
+car caravan,car rally
+car parade,car rally
+car protest,car rally
+car rally,car rally
+car-protest,car rally
+car-rally,car rally
+drive around,car rally
+drive-in rally,car rally
+drive-thru rally,car rally
+motorcade,car rally
+Park-in,car rally
+road rally,car rally
+caravan protest,caravan
+convoy,caravan
+Civil disobedience,civil disobedience
+civil protest,civil disobedience
+disobedience,civil disobedience
+non-cooperation,civil disobedience
+noncompliance,civil disobedience
+Cleaning Up,cleanup
+musical performance,concert
+counter protest,counterprotest
+counter Protest,counterprotest
+counter- protest,counterprotest
+counter-demonstration,counterprotest
+counter-protest,counterprotest
+Counter-protest,counterprotest
+counter-protester,counterprotest
+counter-protesting Families Belong Together march,counterprotest
+counter-rally,counterprotest
+Counterprotest,counterprotest
+virtual counter-protest,counterprotest
+dance protest,dance
+demo,demonstration
+demonrstation,demonstration
+demonsration,demonstration
+demonsrration,demonstration
+demonstarion,demonstration
+demonstartion,demonstration
+demonstation,demonstration
+demonstratin,demonstration
+Demonstration,demonstration
+demonstration/march,demonstration
+demonstrations,demonstration
+demonstratoin,demonstration
+Demonstraton,demonstration
+demonstraton,demonstration
+demonstrator,demonstration
+demontration,demonstration
+Demostration,demonstration
+demostration,demonstration
+deomnstration,demonstration
+deomstration,demonstration
+dmeonstration,demonstration
+virtual demonstration,demonstration
+die in,die-in
+die-in/death train,die-in
+direct action march,direct action
+direction action,direct action
+discussions,discussion
+on-campus discussion,discussion
+door-knocking,door knocking
+"\""drive\""",drive
+Drive,drive
+"\""honk and wave\""",drive-by protest
+Educational Fair,educational event
+hanging of effigy,effigy
+meal strike,fast
+Festival,festival
+flash mob,flashmob
+funeral march,funeral
+funeral procession,funeral
+Gathering,gathering
+solidarity gathering,gathering
+virtual gathering,gathering
+horseback ride,horse ride
+human barricade,human chain
+Human Chain,human chain
+hunger-strike,hunger strike
+kneel-in,kneeling
+kneeling during nat'l anthem,kneeling
+kneeling protest,kneeling
+"\""kookout\""",kookout
+kindness march,march
+macrh,march
+marach,march
+marcg,march
+March,march
+march out,march
+peace march,march
+procession,march
+ruck march,march
+virtual march,march
+March and demonstration,march; demonstration
+march/festival,march; festival
+march and forum,march; forum
+March/Parade,march; parade
+march/protest,march; protest
+March/protest,march; protest
+march & rally,march; rally
+March/Rally,march; rally
+march and vigil,march; vigil
+Meeting,meeting
+meeting with City Commissioner,meeting
+meetings,meeting
+Meetup,meeting
+memorial ceremony,memorial
+memorial service,memorial
+motorcycle ride,motorcycle rally
+negotiaiton,negotiation
+"\""noise rally\""",noise
+banging pots protest,noise
+noise demo outside home of U.S. Senator Ted Cruz,noise
+Non-march,non-march
+occupying land,occupation
+nonviolent occupation,occupation; nonviolent
+paddle out,paddle-out
+paddleout,paddle-out
+Parade,parade
+Petition,petition
+petition drive,petition
+petition signing,petition
+informational picket,picket
+picket line,picket
+picket lines,picket
+picket-line,picket
+picketing,picket
+virtual picket,picket
+plant potting,planting
+pray-in,prayer
+prayer circle,prayer
+prayer protest,prayer
+prayer service,prayer
+prayer/protest,prayer; protest
+prayer rally,prayer; rally
+Prayer rally,prayer; rally
+prayer vigil,prayer; vigil
+prayer walk,prayer; walk
+pres conference,press conference
+multi-school protest,protest
+proest,protest
+Prostest,protest
+protes,protest
+proteset,protest
+protesst,protest
+Protest,protest
+protest (armed),protest
+protest / photo-op,protest
+Protest Event,protest
+protest in trees,protest
+protest0,protest
+protested,protest
+protesters,protest
+protesting,protest
+protestors,protest
+protests,protest
+protestt,protest
+protet,protest
+protetst,protest
+protext,protest
+protoest,protest
+ptotest,protest
+virtual protest,protest
+protest art,protest; artistic
+protest motorcade,protest; car rally
+protest hike,protest; hike
+protest (march),protest; march
+Protest and march,protest; march
+protest march,protest; march
+protest walk,protest; march
+protest/march,protest; march
+protest parade,protest; parade
+protest and rally,protest; rally
+protest rally,protest; rally
+Protest/rally,protest; rally
+this event is all of the above,protest; rally; demonstration; march
+protest resignation,protest; resignation
+protest (sit-in),protest; sit-in
+protest / sit-in,protest; sit-in
+protest/takeover,protest; takeover
+protest vandalism,protest; vandalism
+protest/vigil,protest; vigil
+protest (walk-out),protest; walkout
+Protest (walk-out),protest; walkout
+protest: walkout,protest; walkout
+protest'walk-out,protest; walkout
+Public nudity,public nudity
+assembly,rally
+online rally,rally
+prally,rally
+public rally,rally
+raaly,rally
+rall,rally
+rallies,rally
+rallly,rally
+rallt,rally
+Rally,rally
+rallying,rally
+raly,rally
+relay,rally
+superhero rally,rally
+virtual rally,rally
+Rally and drive by Mar-a-Lago,rally; drive-by protest
+rally and march,rally; march
+Rally and march,rally; march
+rally then march,rally; march
+rally/march,rally; march
+non-partisan rally,rally; nonpartisan
+rally protest,rally; protest
+rally/protests,rally; protest
+social action rally,rally; social action
+rally and vigil,rally; vigil
+self-immolation protest,self-immolation
+"\""send out\"" day",send-out
+postcard writing to public officials,send-out
+sick out,sick-out
+sickout,sick-out
+Silent protest,silent protest
+sit in,sit-in
+Sit in,sit-in
+sit in/rally,sit-in
+Sit-in,sit-in
+sit-in demonstration,sit-in
+sitin,sit-in
+then sit-in,sit-in
+virtual sit-in,sit-in
+skate protest,skate
+skits,skit
+sleeping dragon protest,sleep-in
+slow-roll,slow roll
+Speaking event,speech
+Speaking Event,speech
+speeches,speech
+It's kind of a combination NVDA and strike. It's a trash pickup/strike with signs demanding declaration of a climate emergency,strike
+srike,strike
+Strike,strike
+stroke,strike
+tuition strike,strike
+virtual strike,strike
+wildcat strike,strike
+work stoppage,strike
+work strike,strike
+strike & demonstration,strike; demonstration
+Strike and Demonstration,strike; demonstration
+Strike and meet up to demonstrate,strike; demonstration
+Strike/Walk out,strike; walkout
+swim out,swim-out
+swim protest,swim-out
+teach in,teach-in
+virtual teach-in,teach-in
+tractorcade,tractor rally
+truck protest,truck rally
+political vandalism,vandalism
+vandalization,vandalism
+candlelight vigil,vigil
+Interfaith Vigil,vigil
+online vigil,vigil
+vigi,vigil
+Vigil,vigil
+vigil (shabbat),vigil
+vigils,vigil
+viigl,vigil
+virtual vigil,vigil
+Vigil and demonstration,vigil; demonstration
+Vigil/March,vigil; march
+Candlelight and prayer vigil,vigil; prayer
+vigil/rally,vigil; rally
+walk and ride,walk; bike ride
+A student-led walkout is being organized.,walkout
+School walkout,walkout
+School Walkout,walkout
+support walkout,walkout
+virtual walkout,walkout
+walk out,walkout
+Walk out,walkout
+walk-in,walkout
+walk-out,walkout
+Walk-Out,walkout
+walkin,walkout
+Walkout,walkout
+walkout/march,walkout
+walkout/rally,walkout
+walkouts,walkout
+walkut,walkout
+Walkout and Rally,walkout; rally
+walkout: sit-in,walkout; sit-in
+work-to-rule protest,work to rule
