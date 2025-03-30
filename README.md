@@ -2,13 +2,13 @@
 
 Instructions and code for cleaning and rationalizing the three phases of [Crowd Counting Consortium][https://ash.harvard.edu/programs/crowd-counting-consortium/] data for use as a unified data set. This data is published as part of Harvard's [Ash Center for Democratic Justice and Innovation][https://ash.harvard.edu].
 
-If you can download the RData files directly from the links below, you won't need the contents of this repository; at the time of this writing, the RData download link wasn't working, returning this error:
+If you can download the RData files directly from the links below, you may not need the entire contents of this repository; at the time of this writing, the RData download link wasn't working, returning this error:
 
 ```
 {"status":"ERROR","code":404,"message":"datafile access error: requested optional service (image scaling, format conversion, etc.) could not be performed on this datafile."}
 ```
 
-The data has already been cleaned and is published in three tranches:
+The data has already been largely cleaned and is published in three tranches:
 
 - [2017-2020][https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6OPP7H]
 - [2021-2024][https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/9MMYDI]
@@ -24,20 +24,29 @@ From these links, you can access both data and associated coding guides.
     - Added fields
     - Renamed fields
     - Split fields
+- The `event_type` field contains variants of equivalent values.
 
 ## Contents
+
+### Documentation
 
 `All fields summary.txt` contains comma-separated lists of all fields in each data set.
 
 `Guide to fields by phase.csv` summarizes all fields across the three phases and documents the changes (additions, deletions, etc.)
 
-`Cleanup.txt` contains Grep commands to fix the errors prior to import.
+### Processing
 
-`Setup.R` contains R commands to set up the environment.
+Files are listed in order of use; the end result is a table named `fullData_consolidated` containing rationalized, clean, deduped data with consolidated "event_type"s.
 
-`Import phase <n>.R` contain R commands to import the data from each file.
+`Cleanup.txt` contains Grep commands to fix errors in each table prior to import.
 
-`Merge.R` contains R commands to rationalize the tables and merge them into a single table.
+`Setup.R` contains commands to set up the environment.
+
+`Import phase <n>.R` contain commands to import the data from each file.
+
+`Merge.R` contains commands to rationalize the tables and merge them into a single table.
+
+`Consolidate event types.R` contains coalesce equivalent values in the `event_type` column. For example, "bicycle rally", "bike ride", and "bicycle ride" all become "bike rally".
 
 ## References
 
