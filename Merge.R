@@ -101,3 +101,9 @@ phase3_prepped <- phase3
 
 # Merge tables.
 fullData <- bind_rows(phase1_prepped, phase2_prepped, phase3_prepped)
+
+# Remove temp tables.
+rm(phase1_prepped, phase2_prepped, phase3_prepped)
+
+# Delete duplicate rows from the data set.
+fullData <- unique(fullData)
