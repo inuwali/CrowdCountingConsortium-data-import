@@ -16,7 +16,9 @@ transformEventTypes <- function(input, transforms) {
   for (i in seq_len(nrow(transforms))) {
     old <- transforms[i, 1]
     new <- transforms[i, 2]
-    temp$event_type <- gsub(paste("^",old,"$", sep = ""), new, temp$event_type)
+    # temp$event_type <- gsub(paste("^",old,"$", sep = ""), new, temp$event_type)
+    # temp$event_type <- gsub(old, new, temp$event_type, fixed = TRUE)
+    temp$event_type <- ifelse(temp$event_type == old, new, temp$event_type)
   }
   return (temp)
 }
