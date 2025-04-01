@@ -8,16 +8,14 @@ separate_rows(event_type, sep = ",") %>%
 mutate(event_type = trimws(event_type))
 
 # Load transformations
-event_type_transformations <- read.csv("event_type transformations.csv")
+event_type_transformations <- vroom("event_type transformations.csv", escape_double = TRUE, show_col_types = FALSE)
 
 # Transform terms
 transformEventTypes <- function(input, transforms) {
   temp <- input
   for (i in seq_len(nrow(transforms))) {
-    old <- transforms[i, 1]
-    new <- transforms[i, 2]
-    # temp$event_type <- gsub(paste("^",old,"$", sep = ""), new, temp$event_type)
-    # temp$event_type <- gsub(old, new, temp$event_type, fixed = TRUE)
+    old <- as.character(transforms[i, 1])
+    new <- as.character(transforms[i, 2])
     temp$event_type <- ifelse(temp$event_type == old, new, temp$event_type)
   }
   return (temp)
