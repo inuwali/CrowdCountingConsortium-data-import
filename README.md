@@ -42,11 +42,13 @@ Files are listed in order of use; the end result is a table named `fullData_cons
 
 `Setup.R` contains commands to set up the environment.
 
-`Import phase <n>.R` contain commands to import the data from each file.
+`Import function.R` contain a data import function that knows about all the fields.
+
+`Import all phases.R` contain commands to import the data from each file.
 
 `Merge.R` contains commands to rationalize the tables and merge them into a single table.
 
-`Consolidate event types.R` contains coalesce equivalent values in the `event_type` column. For example, "bicycle rally", "bike ride", and "bicycle ride" all become "bike rally".
+`Consolidate event types.R` coalesces equivalent values in the `event_type` column. For example, "bicycle rally", "bike ride", and "bicycle ride" all become "bike rally". Various misspellings, such as "demonsration" and "mrach" are also corrected.
 
 ## References
 
