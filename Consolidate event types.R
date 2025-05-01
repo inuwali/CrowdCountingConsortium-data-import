@@ -28,14 +28,23 @@ fullData_events_exploded <- fullData_events_exploded %>%
 separate_rows(event_type, sep = ";") %>%
 mutate(event_type = trimws(event_type))
 
-# Consolidate back into rows with semicolon-separated values
+# Convert event types to factors
+fullData_events_exploded <- fullData_events_exploded %>%
+  mutate(event_type = as.factor(event_type))
+
+# Discover the factors present in the data
+allEventTypeFactors <- fullData_events_exploded %>%
+  pull(event_type) %>%
+  unique()
+
+# Consolidate back into rows; combine event types into a list of factors
 fullData_consolidated <- fullData_events_exploded %>%
   group_by(
     date,
     locality,
     state,
     location,
-    online,
+    issue_tags,
     macroevent,
     participants,
     claims_summary,
@@ -45,6 +54,7 @@ fullData_consolidated <- fullData_events_exploded %>%
     size_high,
     size_mean,
     size_cat,
+    online,
     arrests,
     arrests_any,
     participant_injuries,
@@ -104,7 +114,7 @@ fullData_consolidated <- fullData_events_exploded %>%
     conf,
     coder
   ) %>%
-  summarise(event_type = paste(event_type, collapse = "; "), .groups = "drop")
+  summarize(event_type = list(factor(event_type, levels = allEventTypeFactors)), .groups = "drop")
 
 # Move the event_type column to its original position
 fullData_consolidated <- fullData_consolidated %>%
