@@ -1,9 +1,10 @@
-# Renames fields in phase 1 data to match phase 3.
+# Renames fields in phase 1 data to match phase 3, but keeping the issue tags.
 phase1_prepped <- phase1 %>%
     rename(
         participants = actors,
         claims_summary = claims,
         event_type = type,
+        issue_tags = issues,
         participant_injuries = injuries_crowd,
         participant_casualties_any = injuries_crowd_any,
         police_injuries = injuries_police,
@@ -41,16 +42,7 @@ phase1_prepped <- phase1 %>%
         source30 = source_30,
     )
 
-# Merges the `issues` field of phase1 data into the `claims_summary` field.
-phase1_prepped$claims_summary <- paste(phase1_prepped$claims_summary, phase1_prepped$issues, sep="; ")
-
-# Deletes the `issues` field of phase 1 post-merge.
-phase1_prepped <- phase1_prepped %>%
-    select(
-        -issues
-    )
-
-# Renames fields in phase 2 data to match phase 3 and deletes fields related to issue tags, since they're not present in either of the other two data sets.
+# Renames fields in phase 2 data to match phase 3, but keeping the issue_tags field, since we'll try to generate those for phase 3.
 phase2_prepped <- phase2 %>%
     rename(
         event_type = type,
@@ -91,7 +83,6 @@ phase2_prepped <- phase2 %>%
         source30 = source_30,
     ) %>%
     select(
-        -issue_tags,
         -issue_tags_summary,
         -issue_tags_verbatim
     )
